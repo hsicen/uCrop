@@ -1,7 +1,8 @@
 package com.lyft.android.scissors2;
 
 import android.graphics.Bitmap;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import java.io.File;
 import java.io.OutputStream;
@@ -55,7 +56,7 @@ public class CropRequest {
   /**
    * Asynchronously flush cropped bitmap into provided stream.
    *
-   * @param outputStream Stream to write to
+   * @param outputStream  Stream to write to
    * @param closeWhenDone wetter or not to close provided stream once flushing is done
    * @return {@link Future} used to cancel or wait for this request.
    */

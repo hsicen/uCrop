@@ -1,32 +1,30 @@
 buildscript {
-    repositories {
-        jcenter()
-    }
+  repositories {
+    jcenter()
+    google()
+    mavenCentral()
+    maven { url 'https://maven.aliyun.com/nexus/content/repositories/releases' }
+  }
 
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
-    }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:7.2.1'
+  }
 }
 
 allprojects {
-    repositories {
-        jcenter()
-        maven {
-            url "https://maven.google.com"
-        }
-    }
+  repositories {
+    jcenter()
+    google()
+    mavenCentral()
+    maven { url 'https://maven.aliyun.com/nexus/content/repositories/releases' }
+  }
 }
 
 ext {
-    minSdkVersion = 14
-    compileSdkVersion = 24
-    buildToolsVersion = '24.0.3'
+  junitVersion = '4.12'
+  mockitoVersion = '1.10.19'
+  robolectricVersion = '3.0'
+  assertjVersion = '1.7.1'
 
-    junitVersion = '4.12'
-    mockitoVersion = '1.10.19'
-    robolectricVersion = '3.0'
-    assertjVersion = '1.7.1'
-    supportVersion = '24.2.1'
-
-    ci = 'true'.equals(System.getenv('CI'))
+  ci = 'true' == System.getenv('CI')
 }
