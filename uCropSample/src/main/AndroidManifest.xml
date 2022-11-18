@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  package="me.hsicen.uCropSample">
+
+  <!--存储权限-->
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+  <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+  <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+  <application
+    android:name="me.hsicen.uCropSample.App"
+    android:theme="@style/Theme.Scissors">
+
+    <activity
+      android:name="me.hsicen.uCropSample.MainActivity"
+      android:exported="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:screenOrientation="portrait">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+    <activity
+      android:name="me.hsicen.uCropSample.CropResultActivity"
+      android:exported="true"
+      android:noHistory="true" />
+
+  </application>
+
+</manifest>
